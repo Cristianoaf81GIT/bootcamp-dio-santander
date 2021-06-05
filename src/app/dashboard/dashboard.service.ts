@@ -13,6 +13,6 @@ export class DashboardService {
   constructor(private http: HttpClient) { }
 
   async getStocks(): Promise<Array<Stock>> {
-    return this.http.get<Stock[]>(`${this.baseUrl}/stock`).toPromise();
+    return this.http.get<Stock[]>(`${this.remoteUrl}/stock`).toPromise();
   }
 }
